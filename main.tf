@@ -63,7 +63,7 @@ locals {
   tags = merge(local.generated_tags, local.input.tags)
 
   # output data
-  output_data = {
+  outputs = {
     name             = local.name
     namespace        = local.namespace
     environment      = local.environment
