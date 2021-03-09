@@ -71,7 +71,8 @@ repos:
       - id: fix-encoding-pragma
       - id: sort-simple-yaml
       - id: mixed-line-ending
-        fix: lr
+        args:
+          - --fix=lf
       - id: check-executables-have-shebangs
   - repo: https://github.com/tcassou/python-pre-commit-hooks
     rev: 3383e2f83463370cf4651040fb697a636bb0374e
