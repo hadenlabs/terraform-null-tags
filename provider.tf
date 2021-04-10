@@ -1,1 +1,0 @@
-provider "locals" {}
