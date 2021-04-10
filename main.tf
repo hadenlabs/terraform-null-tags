@@ -50,7 +50,7 @@ locals {
     namespace   = local.namespace
     environment = local.environment
     stage       = local.stage
-    attributes  = local.id_context.attributes
+    attributes  = local.attributes
   }
 
   generated_tags = {
@@ -68,12 +68,12 @@ locals {
     namespace        = local.namespace
     environment      = local.environment
     stage            = local.stage
-    delimiter        = local.delimiter
+    delimiter        = local.config.delimiter
     attributes       = local.attributes
     tags             = local.tags
-    label_order      = local.label_order
-    label_key_case   = local.label_key_case
-    label_value_case = local.label_value_case
+    label_order      = local.config.label_order
+    label_key_case   = local.config.label_key_case
+    label_value_case = local.config.label_value_case
   }
 
 }
