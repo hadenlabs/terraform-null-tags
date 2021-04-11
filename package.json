@@ -1,6 +1,6 @@
 {
   "name": "terraform-tags",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "terraform tags",
   "repository": "ssh://git@github.com/hadenlabs/terraform-tags.git",
   "author": "Luis Mayta <slovacus@gmail.com>",

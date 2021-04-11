@@ -23,7 +23,7 @@ terraform tags
 ```hcl
   module "main" {
     source = "hadenlabs/terraform-tags"
-    version = "0.0.0"
+    version = "0.1.0"
     namespace   = "hadenlabs"
     environment = "us-east-1"
     stage       = "develop"
@@ -40,7 +40,7 @@ Full working examples can be found in [examples](./examples) folder.
 ```hcl
     module "main" {
       source = "hadenlabs/terraform-tags"
-      version = "0.0.0"
+      version = "0.1.0"
       namespace   = "hadenlabs"
       environment = "us-east-1"
       stage       = "develop"
