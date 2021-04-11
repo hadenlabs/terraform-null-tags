@@ -12,9 +12,9 @@
 
   -->
 
-# terraform-tags
+# terraform-null-tags
 
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/hadenlabs/terraform-tags.svg?label=latest&sort=semver)](https://github.com/hadenlabs/terraform-tags/releases) [![Lint](https://github.com/hadenlabs/terraform-tags/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/hadenlabs/terraform-tags/actions) [![Issues](https://img.shields.io/github/issues/hadenlabs/terraform-tags.svg)](https://github.com/hadenlabs/terraform-tags/issues) [![Latest Release](https://img.shields.io/github/release/hadenlabs/terraform-tags.svg)](https://github.com/hadenlabs/terraform-tags/releases) [![Beacon](https://ga-beacon.appspot.com/G-MZEK48EGE8/terraform-tags/readme)](https://github.com/hadenlabs/terraform-tags)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/hadenlabs/terraform-null-tags.svg?label=latest&sort=semver)](https://github.com/hadenlabs/terraform-null-tags/releases) [![Lint](https://github.com/hadenlabs/terraform-null-tags/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/hadenlabs/terraform-null-tags/actions) [![Issues](https://img.shields.io/github/issues/hadenlabs/terraform-null-tags.svg)](https://github.com/hadenlabs/terraform-null-tags/issues) [![Latest Release](https://img.shields.io/github/release/hadenlabs/terraform-null-tags.svg)](https://github.com/hadenlabs/terraform-null-tags/releases) [![Beacon](https://ga-beacon.appspot.com/G-MZEK48EGE8/terraform-null-tags/readme)](https://github.com/hadenlabs/terraform-null-tags)
 
 terraform tags
 
@@ -22,7 +22,7 @@ terraform tags
 
 ```hcl
   module "main" {
-    source = "hadenlabs/terraform-tags"
+    source = "hadenlabs/terraform-null-tags"
     version = "0.1.0"
     namespace   = "hadenlabs"
     environment = "us-east-1"
@@ -39,7 +39,7 @@ Full working examples can be found in [examples](./examples) folder.
 
 ```hcl
     module "main" {
-      source = "hadenlabs/terraform-tags"
+      source = "hadenlabs/terraform-null-tags"
       version = "0.1.0"
       namespace   = "hadenlabs"
       environment = "us-east-1"
@@ -102,13 +102,13 @@ No resources.
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/hadenlabs/terraform-tags/issues).
+File a GitHub [issue](https://github.com/hadenlabs/terraform-null-tags/issues).
 
 ## Contributing
 
 ### Bug Reports & Feature Requests
 
-Please use the [issue tracker](https://github.com/hadenlabs/terraform-tags/issues) to report any bugs or file feature requests.
+Please use the [issue tracker](https://github.com/hadenlabs/terraform-null-tags/issues) to report any bugs or file feature requests.
 
 ### Development
 
@@ -149,6 +149,6 @@ All other trademarks referenced herein are the property of their respective owne
 
 The code and styles are licensed under the LGPL-3.0 license [See project license.](LICENSE).
 
-## Don't forget to 🌟 Star 🌟 the repo if you like terraform-tags
+## Don't forget to 🌟 Star 🌟 the repo if you like terraform-null-tags
 
-[Your feedback is appreciated](https://github.com/hadenlabs/terraform-tags/issues)
+[Your feedback is appreciated](https://github.com/hadenlabs/terraform-null-tags/issues)

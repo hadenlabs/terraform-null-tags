@@ -1,8 +1,8 @@
 {
-  "name": "terraform-tags",
+  "name": "terraform-null-tags",
   "version": "0.1.0",
   "description": "terraform tags",
-  "repository": "ssh://git@github.com/hadenlabs/terraform-tags.git",
+  "repository": "ssh://git@github.com/hadenlabs/terraform-null-tags.git",
   "author": "Luis Mayta <slovacus@gmail.com>",
   "license": "LGPL-3.0",
   "engines": {

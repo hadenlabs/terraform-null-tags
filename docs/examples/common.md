@@ -2,7 +2,7 @@
 
 ```hcl
     module "main" {
-      source = "hadenlabs/terraform-tags"
+      source = "hadenlabs/terraform-null-tags"
       version = "0.1.0"
       namespace   = "hadenlabs"
       environment = "us-east-1"

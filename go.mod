@@ -1,4 +1,4 @@
-module github.com/hadenlabs/terraform-tags
+module github.com/hadenlabs/terraform-null-tags
 
 go 1.16
 

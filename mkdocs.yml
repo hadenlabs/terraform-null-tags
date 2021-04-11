@@ -1,4 +1,4 @@
-site_name: terraform-tags Documentation
+site_name: terraform-null-tags Documentation
 theme: 'material'
 markdown_extensions:
   - toc:
@@ -15,8 +15,8 @@ extra:
   font:
     text: 'Source Sans Pro'
 
-repo_name: 'hadenlabs/terraform-tags'
-repo_url: 'https://github.com/hadenlabs/terraform-tags'
+repo_name: 'hadenlabs/terraform-null-tags'
+repo_url: 'https://github.com/hadenlabs/terraform-null-tags'
 copyright: 'Copyright © 2021 <a href="https://hadenlabs.com">hadenlabs</a>'
 
 google_analytics:
