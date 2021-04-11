@@ -1,6 +1,6 @@
 
 module "main" {
-  source      = "git://github.com/hadenlabs/terraform-tags.git?ref=0.0.0"
+  source      = "git://github.com/hadenlabs/terraform-null-tags.git?ref=0.0.0"
   namespace   = var.namespace
   environment = var.environment
   stage       = var.stage
