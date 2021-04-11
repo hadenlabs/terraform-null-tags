@@ -5,7 +5,7 @@
 #
 
 # Name of this project
-name: terraform-tags
+name: terraform-null-tags
 
 # Tags of this project
 tags:
@@ -25,25 +25,25 @@ email:
 license: 'LGPL-3.0'
 
 # Canonical GitHub repo
-github_repo: hadenlabs/terraform-tags
+github_repo: hadenlabs/terraform-null-tags
 
 # Badges to display
 badges:
   - name: GitHub tag (latest SemVer)
-    image: https://img.shields.io/github/v/tag/hadenlabs/terraform-tags.svg?label=latest&sort=semver
-    url: https://github.com/hadenlabs/terraform-tags/releases
+    image: https://img.shields.io/github/v/tag/hadenlabs/terraform-null-tags.svg?label=latest&sort=semver
+    url: https://github.com/hadenlabs/terraform-null-tags/releases
   - name: Lint
-    image: https://github.com/hadenlabs/terraform-tags/actions/workflows/lint.yml/badge.svg?branch=develop
-    url: https://github.com/hadenlabs/terraform-tags/actions
+    image: https://github.com/hadenlabs/terraform-null-tags/actions/workflows/lint.yml/badge.svg?branch=develop
+    url: https://github.com/hadenlabs/terraform-null-tags/actions
   - name: Issues
-    image: https://img.shields.io/github/issues/hadenlabs/terraform-tags.svg
-    url: https://github.com/hadenlabs/terraform-tags/issues
+    image: https://img.shields.io/github/issues/hadenlabs/terraform-null-tags.svg
+    url: https://github.com/hadenlabs/terraform-null-tags/issues
   - name: Latest Release
-    image: https://img.shields.io/github/release/hadenlabs/terraform-tags.svg
-    url: https://github.com/hadenlabs/terraform-tags/releases
+    image: https://img.shields.io/github/release/hadenlabs/terraform-null-tags.svg
+    url: https://github.com/hadenlabs/terraform-null-tags/releases
   - name: Beacon
-    image: https://ga-beacon.appspot.com/G-MZEK48EGE8/terraform-tags/readme
-    url: https://github.com/hadenlabs/terraform-tags
+    image: https://ga-beacon.appspot.com/G-MZEK48EGE8/terraform-null-tags/readme
+    url: https://github.com/hadenlabs/terraform-null-tags
 
 # Short description of this project
 description: |-
@@ -54,7 +54,7 @@ usage: |-
 
   ```hcl
     module "main" {
-      source = "hadenlabs/terraform-tags"
+      source = "hadenlabs/terraform-null-tags"
       version = "0.1.0"
       namespace   = "hadenlabs"
       environment = "us-east-1"

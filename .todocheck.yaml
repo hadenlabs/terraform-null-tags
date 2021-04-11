@@ -1,4 +1,4 @@
-origin: github.com/hadenlabs/terraform-tags
+origin: github.com/hadenlabs/terraform-null-tags
 issue_tracker: GITHUB
 auth:
   type: none
