@@ -1,0 +1,54 @@
+name: test
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # every day at midnight
+
+  workflow_run:
+    workflows: ['lint-code']
+    types:
+      - completed
+
+  push:
+    branches:
+      - develop
+      - main
+
+  pull_request:
+    branches:
+      - develop
+      - main
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  GITHUB_OWNER: ${{ secrets.GH_OWNER }}
+  GITHUB_ORGANIZATION: ${{ secrets.GH_OWNER }}
+
+jobs:
+  test:
+    name: test
+    strategy:
+      matrix:
+        go-version: [1.16.x]
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: check out a copy of the repo
+        uses: actions/checkout@v2
+
+      - name: Install Task
+        uses: arduino/setup-task@v1
+
+      - name: install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: ${{ matrix.go-version }}
+
+      - name: install terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 1.0.4
+
+      - name: test
+        run: task go:test
