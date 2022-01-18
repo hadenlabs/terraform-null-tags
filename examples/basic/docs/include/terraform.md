@@ -34,6 +34,7 @@ No resources.
 | Name | Description |
 |------|-------------|
 | <a name="output_delimiter"></a> [delimiter](#output\_delimiter) | show delimiter |
+| <a name="output_id_full"></a> [id\_full](#output\_id\_full) | return id full generated of label order |
 | <a name="output_name"></a> [name](#output\_name) | show name |
 | <a name="output_namespace"></a> [namespace](#output\_namespace) | show namespace module |
 | <a name="output_stage"></a> [stage](#output\_stage) | show stage |
