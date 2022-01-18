@@ -10,11 +10,11 @@
 
 # How To Contribute
 
-Contributions to base-template are welcome.
+Contributions to terraform-null-tags are welcome.
 
 Feel free to use all of the contribution options:
 
-- Contribute to base-template repositories on [GitHub](https://github.com/hadenlabs/base-template). See [Git flow](./contribute/git-flow.md).
+- Contribute to terraform-null-tags repositories on [GitHub](https://github.com/hadenlabs/terraform-null-tags). See [Git flow](./contribute/git-flow.md).
 
 ## Getting Started
 
@@ -22,7 +22,7 @@ Feel free to use all of the contribution options:
 
 In general, MRs are welcome. We follow the typical "fork-and-pull" [Git flow](./contribute/git-flow.md).
 
-1.  **Fork** the repo on GitLab
+1.  **Fork** the repo on Github
 2.  **Clone** the project to your own machine
 3.  **Commit** changes to your own branch using [Git flow](./contribute/git-flow.md)
 4.  **Push** your work back up to your fork
@@ -75,7 +75,7 @@ See [Git flow](./contribute/git-flow.md).
 
 ### Documentation
 
-Documentation is a part of the base-template code base. You can find the documentation files in the `doc/` subdirectory of the [main repository](https://github.com/hadenlabs/base-template). This means that the contribution process is the same for both the source code and documentation.
+Documentation is a part of the terraform-null-tags code base. You can find the documentation files in the `doc/` subdirectory of the [main repository](https://github.com/hadenlabs/terraform-null-tags). This means that the contribution process is the same for both the source code and documentation.
 
 ### Testing
 
@@ -83,15 +83,15 @@ See [Testing](./testing.md).
 
 ### Code Submission
 
-1.  See if a [Pull Request](https://github.com/hadenlabs/base-template/pulls) exists
+1.  See if a [Pull Request](https://github.com/hadenlabs/terraform-null-tags/pulls) exists
     - Add some comments or review the code to help it along
     - Don\'t be afraid to comment when logic needs clarification
-2.  Create a Fork and open a [Pull Request](https://github.com/hadenlabs/base-template/pulls) if needed
+2.  Create a Fork and open a [Pull Request](https://github.com/hadenlabs/terraform-null-tags/pulls) if needed
 
 ### Code Review
 
 - Anyone can review code
-- Any [Pull Request](https://github.com/hadenlabs/base-template/pulls) should be closed or merged within a week
+- Any [Pull Request](https://github.com/hadenlabs/terraform-null-tags/pulls) should be closed or merged within a week
 
 ### Code Acceptance
 
