@@ -42,3 +42,8 @@ output "tags" {
   description = "Tags as a map (includes a `Name` tag)"
   value       = local.outputs.tags
 }
+
+output "id_full" {
+  description = "return id full generated of label order"
+  value       = local.outputs.id_full
+}

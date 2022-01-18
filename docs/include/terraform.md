@@ -34,6 +34,7 @@ No resources.
 |------|-------------|
 | <a name="output_attributes"></a> [attributes](#output\_attributes) | List of attributes |
 | <a name="output_delimiter"></a> [delimiter](#output\_delimiter) | Delimiter between `namespace`, `stage`, `name` and `attributes` |
+| <a name="output_id_full"></a> [id\_full](#output\_id\_full) | return id full generated of label order |
 | <a name="output_label_order"></a> [label\_order](#output\_label\_order) | The naming order actually used to create the ID |
 | <a name="output_name"></a> [name](#output\_name) | Normalized name |
 | <a name="output_name32"></a> [name32](#output\_name32) | first 32 chars of string name |
