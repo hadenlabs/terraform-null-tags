@@ -22,3 +22,8 @@ output "tags" {
   description = "show tags"
   value       = module.main.tags
 }
+
+output "id_full" {
+  description = "return id full generated of label order"
+  value       = module.main.id_full
+}
