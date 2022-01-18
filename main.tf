@@ -1,7 +1,7 @@
 locals {
 
   defaults = {
-    label_order         = ["namespace", "environment", "stage", "name", "attributes"]
+    label_order         = ["namespace", "stage", "name", "attributes"]
     regex_replace_chars = "/[^-a-zA-Z0-9]/"
     delimiter           = "-"
     replacement         = ""
@@ -12,19 +12,18 @@ locals {
   }
 
   input = merge({
-    namespace   = var.namespace
-    environment = var.environment
-    stage       = var.stage
-    name        = var.name
-    attributes  = var.attributes
-    tags        = var.tags
+    namespace  = var.namespace
+    stage      = var.stage
+    name       = var.name
+    attributes = var.attributes
+    tags       = var.tags
 
   }, var.config)
 
   config = merge(local.defaults, local.input)
 
   # string_label_names are names of inputs that are strings (not list of strings) used as labels
-  string_label_names = ["name", "namespace", "environment", "stage"]
+  string_label_names = ["name", "namespace", "stage"]
   normalized_labels = { for k in local.string_label_names : k =>
     local.input[k] == null ? "" : replace(local.input[k], local.config.regex_replace_chars, local.config.replacement)
   }
@@ -41,16 +40,15 @@ locals {
     local.config.label_value_case == "upper" ? upper(v) : lower(v))
   ]))
 
-  name        = local.formatted_labels["name"]
-  namespace   = local.formatted_labels["namespace"]
-  environment = local.formatted_labels["environment"]
-  stage       = local.formatted_labels["stage"]
+  namespace = local.formatted_labels["namespace"]
+  stage     = local.formatted_labels["stage"]
+  name      = local.formatted_labels["name"]
 
   tags_context = {
-    namespace   = local.namespace
-    environment = local.environment
-    stage       = local.stage
-    attributes  = local.attributes
+    namespace  = local.namespace
+    stage      = local.stage
+    name       = local.name
+    attributes = local.attributes
   }
 
   generated_tags = {
@@ -66,7 +64,6 @@ locals {
   outputs = {
     name             = local.name
     namespace        = local.namespace
-    environment      = local.environment
     stage            = local.stage
     delimiter        = local.config.delimiter
     attributes       = local.attributes
