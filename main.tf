@@ -51,6 +51,10 @@ locals {
     attributes = local.attributes
   }
 
+  labels = [for key in local.config.label_order : local.tags_context[key] if length(local.tags_context[key]) > 0]
+
+  id_full = join(local.config.delimiter, local.labels)
+
   generated_tags = {
     for l in keys(local.tags_context) :
     local.config.label_key_case == "upper" ? upper(l) : (
@@ -71,6 +75,7 @@ locals {
     label_order      = local.config.label_order
     label_key_case   = local.config.label_key_case
     label_value_case = local.config.label_value_case
+    id_full          = local.id_full
   }
 
 }
