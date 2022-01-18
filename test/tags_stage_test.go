@@ -29,10 +29,10 @@ func TestStageSuccess(t *testing.T) {
 	// This will run `terraform init` and `terraform apply` and fail the test if there are any errors
 	terraform.InitAndApply(t, terraformOptions)
 
-	outputName := terraform.OutputMap(t, terraformOptions, "name")
-	outputTags := terraform.OutputMap(t, terraformOptions, "tags")
+	outputName := terraform.Output(t, terraformOptions, "name")
 	outputDelimiter := terraform.Output(t, terraformOptions, "delimiter")
+	outputTags := terraform.OutputMap(t, terraformOptions, "tags")
 	assert.NotEmpty(t, outputTags, outputTags)
 	assert.NotEmpty(t, outputDelimiter, outputDelimiter)
-	assert.Equal(t, outputName, "hadenlabs-development", outputName)
+	assert.Equal(t, NAME, outputName)
 }
