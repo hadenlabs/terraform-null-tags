@@ -11,17 +11,15 @@ func TestTagsBasicSuccess(t *testing.T) {
 	t.Parallel()
 
 	const NAMESPACE string = "hadenlabs"
-	const ENVIRONMENT string = "us-west"
 	const STAGE string = "development"
 	const NAME string = "jenkins"
 
 	terraformOptions := &terraform.Options{
 		TerraformDir: "tags-basic",
 		Vars: map[string]interface{}{
-			"namespace":   NAMESPACE,
-			"environment": ENVIRONMENT,
-			"stage":       STAGE,
-			"name":        NAME,
+			"namespace": NAMESPACE,
+			"stage":     STAGE,
+			"name":      NAME,
 		},
 	}
 

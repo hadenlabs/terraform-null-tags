@@ -24,7 +24,6 @@ No resources.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_attributes"></a> [attributes](#input\_attributes) | Additional attributes (e.g. `1`) | `list(string)` | `[]` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment, e.g. 'uw2', 'us-west-2', OR 'prod', 'staging', 'dev', 'UAT' | `string` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | Solution name, e.g. 'app' or 'jenkins' | `string` | n/a | yes |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace, which could be your organization name or abbreviation, e.g. 'eg' or 'cp' | `string` | n/a | yes |
 | <a name="input_stage"></a> [stage](#input\_stage) | Stage, e.g. 'prod', 'staging', 'dev', OR 'source', 'build', 'test', 'deploy', 'release' | `string` | n/a | yes |
@@ -35,7 +34,6 @@ No resources.
 | Name | Description |
 |------|-------------|
 | <a name="output_delimiter"></a> [delimiter](#output\_delimiter) | show delimiter |
-| <a name="output_environment"></a> [environment](#output\_environment) | show environment |
 | <a name="output_name"></a> [name](#output\_name) | show name |
 | <a name="output_namespace"></a> [namespace](#output\_namespace) | show namespace module |
 | <a name="output_stage"></a> [stage](#output\_stage) | show stage |
