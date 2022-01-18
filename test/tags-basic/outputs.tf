@@ -13,6 +13,11 @@ output "name" {
   value       = module.main.name
 }
 
+output "id_full" {
+  description = "return id full generated of label order"
+  value       = module.main.id_full
+}
+
 output "delimiter" {
   description = "show delimiter"
   value       = module.main.delimiter
