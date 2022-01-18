@@ -23,7 +23,6 @@ No resources.
 |------|-------------|------|---------|:--------:|
 | <a name="input_attributes"></a> [attributes](#input\_attributes) | Additional attributes (e.g. `1`) | `list(string)` | `[]` | no |
 | <a name="input_config"></a> [config](#input\_config) | Single object for setting entire configuration at once.<br>See description of individual variables for details. | `any` | `{}` | no |
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment, e.g. 'uw2', 'us-west-2', OR 'prod', 'staging', 'dev', 'UAT' | `string` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | Solution name, e.g. 'app' or 'jenkins' | `string` | n/a | yes |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace, which could be your organization name or abbreviation, e.g. 'eg' or 'cp' | `string` | n/a | yes |
 | <a name="input_stage"></a> [stage](#input\_stage) | Stage, e.g. 'prod', 'staging', 'dev', OR 'source', 'build', 'test', 'deploy', 'release' | `string` | n/a | yes |
@@ -34,8 +33,7 @@ No resources.
 | Name | Description |
 |------|-------------|
 | <a name="output_attributes"></a> [attributes](#output\_attributes) | List of attributes |
-| <a name="output_delimiter"></a> [delimiter](#output\_delimiter) | Delimiter between `namespace`, `environment`, `stage`, `name` and `attributes` |
-| <a name="output_environment"></a> [environment](#output\_environment) | Normalized environment |
+| <a name="output_delimiter"></a> [delimiter](#output\_delimiter) | Delimiter between `namespace`, `stage`, `name` and `attributes` |
 | <a name="output_label_order"></a> [label\_order](#output\_label\_order) | The naming order actually used to create the ID |
 | <a name="output_name"></a> [name](#output\_name) | Normalized name |
 | <a name="output_name32"></a> [name32](#output\_name32) | first 32 chars of string name |
