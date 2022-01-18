@@ -50,301 +50,11 @@ Full working examples can be found in [examples](./examples) folder.
 
 ```hcl
   module "main" {
-      source = "hadenlabs/repository/github"
-      version = "0.12.0"
-
-      providers = {
-        github = github
-      }
-
-      name        = "repository-example"
-      description = "github repository for repository"
-      visibility  = "public"
-      settings = {
-        auto_init              = true
-        has_issues             = true
-        has_wiki               = true
-        has_projects           = true
-    }
-  }
-
-```
-
-### implement key deploy
-
-```hcl
-
-  module "main_with_key" {
-    source = "hadenlabs/repository/github"
-    version = "0.12.0"
-
-    providers = {
-      github = github
-    }
-
-    name        = "repository-example-with-key"
-    description = "github repository for repository"
-    visibility  = "public"
-    deploy_keys = [{
-      title = "user key"
-      key = "/usr/etc/key/user.pub"
-      read_only = false
-    }]
-  }
-
-```
-
-### implement secrets
-
-```hcl
-
-  module "main_with_secrets" {
-    source = "hadenlabs/repository/github"
-    version = "0.12.0"
-
-    providers = {
-      github = github
-    }
-
-    name        = "repository-example-with-key"
-    description = "github repository for repository"
-    visibility  = "public"
-    secrets = {
-      key= value
-    }
-  }
-
-```
-
-### implement pages
-
-```hcl
-
-  module "main_with_pages" {
-    source = "hadenlabs/repository/github"
-    version = "0.12.0"
-
-    providers = {
-      github = github
-    }
-
-    name        = "repository-example-with-key"
-    description = "github repository for repository"
-    visibility  = "public"
-    pages = {
-      branch = "gh-pages"
-      path = "/"
-    }
-
-    topics = [
-        "go",
-        "terraform",
-    ]
-
-    settings = {
-      has_wiki               = true
-      has_projects           = true
-      vulnerability_alerts   = true
-    }
-  }
-
-```
-
-### implement templates
-
-```hcl
-
-  module "main" {
-      source = "hadenlabs/repository/github"
-      version = "0.12.0"
-
-      providers = {
-        github = github
-      }
-
-      name        = "repository-example"
-      description = "github repository for repository"
-      visibility  = "public"
-      settings = {
-        auto_init              = true
-        has_issues             = true
-        has_wiki               = true
-        has_projects           = true
-      }
-
-      pages = {
-        owner = "owner-user"
-        repository = "name-repository"
-      }
-  }
-
-```
-
-### implement collaborator
-
-```hcl
-
-  module "main" {
-      source = "hadenlabs/repository/github"
-      version = "0.12.0"
-
-      providers = {
-        github = github
-      }
-
-      name        = "repository-example"
-      description = "github repository for repository"
-      visibility  = "public"
-      settings = {
-        auto_init              = true
-        has_issues             = true
-        has_wiki               = true
-        has_projects           = true
-      }
-
-      collaborators = [
-      {
-        username = "other-user"
-        permission = "push"
-      },
-      ]
-  }
-
-```
-
-### implement with file
-
-```hcl
-
-  module "repository_file" {
-    providers = {
-      github = github
-    }
-    source      = "hadenlabs/repository/github"
-    version     = "0.12.0"
-    name        = "repository-example"
-    description = "repository example"
-    visibility  = "public"
-    settings = {
-      auto_init = true
-    }
-    files = [
-        {
-          branch              = "main"
-          file                = "LICENSE"
-          content             = file(format("%s/LICENSE", path.module))
-          commit_message      = "ci: implement template"
-          commit_author       = "@slovacus"
-          commit_email        = "slovacus@gmail.com"
-          overwrite_on_create = true
-        },
-    ]
-  }
-
-```
-
-### implement with gitflow enabled
-
-```hcl
-
-  module "repository_file" {
-    providers = {
-      github = github
-    }
-    source      = "hadenlabs/repository/github"
-    version     = "0.12.0"
-    name        = "repository-example"
-    is_git_flow = true
-    description = "repository example"
-    visibility  = "public"
-    settings = {
-      auto_init = true
-    }
-  }
-
-```
-
-### implement with topics and types
-
-```hcl
-
-  module "repository_file" {
-    providers = {
-      github = github
-    }
-    source      = "hadenlabs/repository/github"
-    version     = "0.12.0"
-    name        = "repository-example"
-    description = "repository example"
-    visibility  = "public"
-    types  = ["django"]
-    topics  = ["go"]
-  }
-
-```
-
-### not implement labels default
-
-```hcl
-
-  module "repository_file" {
-    providers = {
-      github = github
-    }
-    source      = "hadenlabs/repository/github"
-    version     = "0.12.0"
-    name        = "repository-example"
-    description = "repository example"
-    visibility  = "public"
-    add_labels_default = false
-  }
-
-```
-
-### implement template
-
-```hcl
-
-  module "repository_file" {
-    providers = {
-      github = github
-    }
-    source      = "hadenlabs/repository/github"
-    version     = "0.12.0"
-    name        = "repository-example"
-    description = "repository example"
-    visibility  = "public"
-    settings    = {
-      template = {
-        owner = "hadenlabs"
-        repository = "terraform-null-tags"
-      }
-    }
-
-  }
-
-```
-
-### implement branch protection
-
-```hcl
-
-  module "repository_branch_protection" {
-    providers = {
-      github = github
-    }
-    source      = "hadenlabs/repository/github"
-    version     = "0.12.0"
-    name        = "repository-example"
-    description = "repository example"
-    visibility  = "public"
-    branch_protection    = {
-      "develop" = {
-        enforce_admins = true
-        allows_deletions = false
-      }
-    }
-
+    source = "hadenlabs/terraform-null-tags"
+    version = "0.1.1"
+    namespace   = "hadenlabs"
+    stage       = "develop"
+    name        = "jenkins"
   }
 
 ```
@@ -373,21 +83,19 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 | --- | --- | --- | --- | :-: |
-| <a name="input_config"></a> [config](#input_config) | Single object for setting entire configuration at once.<br>See description of individual variables for details. | `any` | `{}` | no |
 | <a name="input_attributes"></a> [attributes](#input_attributes) | Additional attributes (e.g. `1`) | `list(string)` | `[]` | no |
-| <a name="input_tags"></a> [tags](#input_tags) | Additional tags (e.g. `map('BusinessUnit','XYZ')` | `map(string)` | `{}` | no |
-| <a name="input_environment"></a> [environment](#input_environment) | Environment, e.g. 'uw2', 'us-west-2', OR 'prod', 'staging', 'dev', 'UAT' | `string` | n/a | yes |
+| <a name="input_config"></a> [config](#input_config) | Single object for setting entire configuration at once.<br>See description of individual variables for details. | `any` | `{}` | no |
 | <a name="input_name"></a> [name](#input_name) | Solution name, e.g. 'app' or 'jenkins' | `string` | n/a | yes |
 | <a name="input_namespace"></a> [namespace](#input_namespace) | Namespace, which could be your organization name or abbreviation, e.g. 'eg' or 'cp' | `string` | n/a | yes |
 | <a name="input_stage"></a> [stage](#input_stage) | Stage, e.g. 'prod', 'staging', 'dev', OR 'source', 'build', 'test', 'deploy', 'release' | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input_tags) | Additional tags (e.g. `map('BusinessUnit','XYZ')` | `map(string)` | `{}` | no |
 
 ## Outputs
 
 | Name | Description |
 | --- | --- |
 | <a name="output_attributes"></a> [attributes](#output_attributes) | List of attributes |
-| <a name="output_delimiter"></a> [delimiter](#output_delimiter) | Delimiter between `namespace`, `environment`, `stage`, `name` and `attributes` |
-| <a name="output_environment"></a> [environment](#output_environment) | Normalized environment |
+| <a name="output_delimiter"></a> [delimiter](#output_delimiter) | Delimiter between `namespace`, `stage`, `name` and `attributes` |
 | <a name="output_label_order"></a> [label_order](#output_label_order) | The naming order actually used to create the ID |
 | <a name="output_name"></a> [name](#output_name) | Normalized name |
 | <a name="output_name32"></a> [name32](#output_name32) | first 32 chars of string name |
@@ -440,7 +148,7 @@ Using the given version number of `MAJOR.MINOR.PATCH`, we apply the following co
 
 ## Copyright
 
-Copyright © 2018-2021 [Hadenlabs](https://hadenlabs.com)
+Copyright © 2018-2022 [Hadenlabs](https://hadenlabs.com)
 
 ## Trademarks
 
