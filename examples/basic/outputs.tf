@@ -3,19 +3,14 @@ output "namespace" {
   value       = module.main.namespace
 }
 
-output "environment" {
-  description = "show environment"
-  value       = module.main.environment
+output "stage" {
+  description = "show stage"
+  value       = module.main.stage
 }
 
 output "name" {
   description = "show name"
   value       = module.main.name
-}
-
-output "stage" {
-  description = "show stage"
-  value       = module.main.stage
 }
 
 output "delimiter" {

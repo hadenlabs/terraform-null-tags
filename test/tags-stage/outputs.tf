@@ -3,11 +3,6 @@ output "namespace" {
   value       = module.main.namespace
 }
 
-output "environment" {
-  description = "show environment"
-  value       = module.main.environment
-}
-
 output "name" {
   description = "show name"
   value       = module.main.name
