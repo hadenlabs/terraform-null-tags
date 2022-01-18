@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. This file uses change log convention from [keep a CHANGELOG](http://keepachangelog.com/en/0.3.0/).
 
+<a name="0.2.0"></a>
+
+## [0.2.0](https://github.com/hadenlabs/terraform-null-tags/compare/0.1.1...0.2.0)
+
+> 2022-01-17
+
+### Bug Fixes
+
+- version generate ([#10](https://github.com/hadenlabs/terraform-null-tags/issues/10))
+- validate test name ([#10](https://github.com/hadenlabs/terraform-null-tags/issues/10))
+- default environment not required ([#10](https://github.com/hadenlabs/terraform-null-tags/issues/10))
+
+### Code Refactoring
+
+- configuration confluence ([#10](https://github.com/hadenlabs/terraform-null-tags/issues/10))
+- task actions mark and sonar ([#10](https://github.com/hadenlabs/terraform-null-tags/issues/10))
+- configuration project ([#11](https://github.com/hadenlabs/terraform-null-tags/issues/11))
+- configuration projects ([#11](https://github.com/hadenlabs/terraform-null-tags/issues/11))
+- make actions to task ([#11](https://github.com/hadenlabs/terraform-null-tags/issues/11))
+- lints pre-commit ([#11](https://github.com/hadenlabs/terraform-null-tags/issues/11))
+- change name to repository-null-tags ([#8](https://github.com/hadenlabs/terraform-null-tags/issues/8))
+
+### Features
+
+- implement outputs id full ([#14](https://github.com/hadenlabs/terraform-null-tags/issues/14))
+- implement id full ([#14](https://github.com/hadenlabs/terraform-null-tags/issues/14))
+- clean var environment ([#10](https://github.com/hadenlabs/terraform-null-tags/issues/10))
+- not used environment ([#10](https://github.com/hadenlabs/terraform-null-tags/issues/10))
+- ignore variable environment ([#10](https://github.com/hadenlabs/terraform-null-tags/issues/10))
+- implement task actions confluence ([#10](https://github.com/hadenlabs/terraform-null-tags/issues/10))
+- implement diagrams ([#11](https://github.com/hadenlabs/terraform-null-tags/issues/11))
+- implement workflow confluence and sonar ([#11](https://github.com/hadenlabs/terraform-null-tags/issues/11))
+
 <a name="0.1.1"></a>
 
 ## [0.1.1](https://github.com/hadenlabs/terraform-null-tags/compare/0.1.0...0.1.1)

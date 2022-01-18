@@ -26,7 +26,7 @@ terraform tags
 ```hcl
   module "main" {
     source = "hadenlabs/terraform-null-tags"
-    version = "0.1.1"
+    version = "0.2.0"
     namespace   = "hadenlabs"
     environment = "us-east-1"
     stage       = "develop"
@@ -51,7 +51,7 @@ Full working examples can be found in [examples](./examples) folder.
 ```hcl
   module "main" {
     source = "hadenlabs/terraform-null-tags"
-    version = "0.1.1"
+    version = "0.2.0"
     namespace   = "hadenlabs"
     stage       = "develop"
     name        = "jenkins"
@@ -96,6 +96,7 @@ No resources.
 | --- | --- |
 | <a name="output_attributes"></a> [attributes](#output_attributes) | List of attributes |
 | <a name="output_delimiter"></a> [delimiter](#output_delimiter) | Delimiter between `namespace`, `stage`, `name` and `attributes` |
+| <a name="output_id_full"></a> [id_full](#output_id_full) | return id full generated of label order |
 | <a name="output_label_order"></a> [label_order](#output_label_order) | The naming order actually used to create the ID |
 | <a name="output_name"></a> [name](#output_name) | Normalized name |
 | <a name="output_name32"></a> [name32](#output_name32) | first 32 chars of string name |
