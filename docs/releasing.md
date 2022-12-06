@@ -1,11 +1,10 @@
-<!-- Space: TerraformNullTags -->
-<!-- Parent: Project -->
-<!-- Title: Releasing -->
-
+<!-- Space: Projects -->
+<!-- Parent: TerraformNullTags -->
+<!-- Title: Releasing TerraformNullTags -->
 <!-- Label: TerraformNullTags -->
 <!-- Label: Project -->
 <!-- Label: Releasing -->
-<!-- Include: docs/disclaimer.md -->
+<!-- Include: disclaimer.md -->
 <!-- Include: ac:toc -->
 
 # Releasing
