@@ -15,13 +15,24 @@
 
   -->
 
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/hadenlabs/terraform-null-tags.svg?label=latest&sort=semver)](https://github.com/hadenlabs/terraform-null-tags/releases) [![Lint](https://github.com/hadenlabs/terraform-null-tags/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/hadenlabs/terraform-null-tags/actions) [![Issues](https://img.shields.io/github/issues/hadenlabs/terraform-null-tags.svg)](https://github.com/hadenlabs/terraform-null-tags/issues) [![Latest Release](https://img.shields.io/github/release/hadenlabs/terraform-null-tags.svg)](https://github.com/hadenlabs/terraform-null-tags/releases)
+[![Latest Release](https://img.shields.io/github/release/hadenlabs/terraform-null-tags)](https://github.com/hadenlabs/terraform-null-tags/releases) [![Lint](https://img.shields.io/github/workflow/status/hadenlabs/terraform-null-tags/lint-code)](https://github.com/hadenlabs/terraform-null-tags/actions?workflow=lint-code) [![CI](https://img.shields.io/github/workflow/status/hadenlabs/terraform-null-tags/ci)](https://github.com/hadenlabs/terraform-null-tags/actions?workflow=ci) [![Test](https://img.shields.io/github/workflow/status/hadenlabs/terraform-null-tags/test)](https://github.com/hadenlabs/terraform-null-tags/actions?workflow=test) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange)](https://keepachangelog.com) [![Terraform Version](https://img.shields.io/badge/terraform-1.x%20|%200.15%20|%200.14%20|%200.13%20|%200.12.20+-623CE4.svg?logo=terraform)](https://github.com/hashicorp/terraform/releases)
 
 # terraform-null-tags
 
 terraform tags
 
+## Requirements
+
+This is a list of plugins that need to be installed previously to enjoy all the goodies of this configuration:
+
+- [gomplate](https://github.com/hairyhenderson/gomplate)
+- [terraform](https://github.com/hashicorp/terraform)
+- [python](https://www.python.org)
+- [taskfile](https://github.com/go-task/task)
+
 ## Usage
+
+# How to use this project
 
 ```hcl
   module "main" {
@@ -38,12 +49,11 @@ Full working examples can be found in [examples](./examples) folder.
 
 ## Examples
 
-<!-- Space: TerraformNullTags -->
-<!-- Parent: Project -->
-<!-- Title: Examples -->
-
+<!-- Space: Projects -->
+<!-- Parent: TerraformNullTags -->
+<!-- Title: Examples TerraformNullTags -->
 <!-- Label: Examples -->
-<!-- Include: docs/disclaimer.md -->
+<!-- Include: ./../disclaimer.md -->
 <!-- Include: ac:toc -->
 
 ### common
@@ -59,13 +69,14 @@ Full working examples can be found in [examples](./examples) folder.
 
 ```
 
- <!-- BEGIN_TF_DOCS -->
+ <!-- markdown-link-check-disable -->
+<!-- BEGIN_TF_DOCS -->
 
 ## Requirements
 
-| Name                                                                     | Version |
-| ------------------------------------------------------------------------ | ------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | >= 0.13 |
+| Name      | Version |
+| --------- | ------- |
+| terraform | >= 0.13 |
 
 ## Providers
 
@@ -83,29 +94,30 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 | --- | --- | --- | --- | :-: |
-| <a name="input_attributes"></a> [attributes](#input_attributes) | Additional attributes (e.g. `1`) | `list(string)` | `[]` | no |
-| <a name="input_config"></a> [config](#input_config) | Single object for setting entire configuration at once.<br>See description of individual variables for details. | `any` | `{}` | no |
-| <a name="input_name"></a> [name](#input_name) | Solution name, e.g. 'app' or 'jenkins' | `string` | n/a | yes |
-| <a name="input_namespace"></a> [namespace](#input_namespace) | Namespace, which could be your organization name or abbreviation, e.g. 'eg' or 'cp' | `string` | n/a | yes |
-| <a name="input_stage"></a> [stage](#input_stage) | Stage, e.g. 'prod', 'staging', 'dev', OR 'source', 'build', 'test', 'deploy', 'release' | `string` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input_tags) | Additional tags (e.g. `map('BusinessUnit','XYZ')` | `map(string)` | `{}` | no |
+| attributes | Additional attributes (e.g. `1`) | `list(string)` | `[]` | no |
+| config | Single object for setting entire configuration at once.<br>See description of individual variables for details. | `any` | `{}` | no |
+| name | Solution name, e.g. 'app' or 'jenkins' | `string` | n/a | yes |
+| namespace | Namespace, which could be your organization name or abbreviation, e.g. 'eg' or 'cp' | `string` | n/a | yes |
+| stage | Stage, e.g. 'prod', 'staging', 'dev', OR 'source', 'build', 'test', 'deploy', 'release' | `string` | n/a | yes |
+| tags | Additional tags (e.g. `map('BusinessUnit','XYZ')` | `map(string)` | `{}` | no |
 
 ## Outputs
 
-| Name | Description |
-| --- | --- |
-| <a name="output_attributes"></a> [attributes](#output_attributes) | List of attributes |
-| <a name="output_delimiter"></a> [delimiter](#output_delimiter) | Delimiter between `namespace`, `stage`, `name` and `attributes` |
-| <a name="output_id_full"></a> [id_full](#output_id_full) | return id full generated of label order |
-| <a name="output_label_order"></a> [label_order](#output_label_order) | The naming order actually used to create the ID |
-| <a name="output_name"></a> [name](#output_name) | Normalized name |
-| <a name="output_name32"></a> [name32](#output_name32) | first 32 chars of string name |
-| <a name="output_name6"></a> [name6](#output_name6) | first 6 chars of string name |
-| <a name="output_namespace"></a> [namespace](#output_namespace) | Normalized namespace |
-| <a name="output_stage"></a> [stage](#output_stage) | Normalized stage |
-| <a name="output_tags"></a> [tags](#output_tags) | Tags as a map (includes a `Name` tag) |
+| Name        | Description                                                     |
+| ----------- | --------------------------------------------------------------- |
+| attributes  | List of attributes                                              |
+| delimiter   | Delimiter between `namespace`, `stage`, `name` and `attributes` |
+| id_full     | return id full generated of label order                         |
+| label_order | The naming order actually used to create the ID                 |
+| name        | Normalized name                                                 |
+| name32      | first 32 chars of string name                                   |
+| name6       | first 6 chars of string name                                    |
+| namespace   | Normalized namespace                                            |
+| stage       | Normalized stage                                                |
+| tags        | Tags as a map (includes a `Name` tag)                           |
 
 <!-- END_TF_DOCS -->
+<!-- markdown-link-check-enable -->
 
 ## Help
 
@@ -115,22 +127,7 @@ File a GitHub [issue](https://github.com/hadenlabs/terraform-null-tags/issues).
 
 ## Contributing
 
-### Bug Reports & Feature Requests
-
-Please use the [issue tracker](https://github.com/hadenlabs/terraform-null-tags/issues) to report any bugs or file feature requests.
-
-### Development
-
-In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
-
-1.  **Fork** the repo on GitHub
-2.  **Clone** the project to your own machine
-3.  **Commit** changes to your own branch
-4.  **Push** your work back up to your fork
-
-5.  Submit a **Pull Request** so that we can review your changes
-
-**NOTE:** Be sure to rebase the latest changes from "upstream" before making a pull request!
+See [Contributing](./docs/contributing.md).
 
 ## Module Versioning
 
