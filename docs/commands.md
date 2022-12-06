@@ -1,14 +1,15 @@
-<!-- Space: TerraformNullTags -->
-<!-- Parent: Project -->
-<!-- Title: Commands -->
-
+<!-- Space: Projects -->
+<!-- Parent: TerraformNullTags -->
+<!-- Title: Commands TerraformNullTags -->
 <!-- Label: TerraformNullTags -->
 <!-- Label: Project -->
 <!-- Label: Commands -->
-<!-- Include: docs/disclaimer.md -->
+<!-- Include: disclaimer.md -->
 <!-- Include: ac:toc -->
 
 # Commands
+
+## Pipenv
 
 ## Taskfile
 
@@ -18,6 +19,14 @@
 
 ```{.bash}
 task mark:sync
+```
+
+### Python
+
+#### Format syntax code python with [black](https://github.com/psf/black)
+
+```{.bash}
+task python:fmt -- {{file_name or path}}
 ```
 
 ### Diagrams
@@ -60,4 +69,18 @@ task version:minor
 
 ```{.bash}
 task version:patch
+```
+
+### Docs
+
+#### build
+
+```{.bash}
+task docs:build
+```
+
+#### server
+
+```{.bash}
+task docs:serve
 ```

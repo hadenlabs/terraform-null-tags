@@ -33,38 +33,46 @@ github_repo: hadenlabs/terraform-null-tags
 
 # Badges to display
 badges:
-  - name: GitHub tag (latest SemVer)
-    image: https://img.shields.io/github/v/tag/hadenlabs/terraform-null-tags.svg?label=latest&sort=semver
+  - name: Latest Release
+    image: https://img.shields.io/github/release/hadenlabs/terraform-null-tags
     url: https://github.com/hadenlabs/terraform-null-tags/releases
   - name: Lint
-    image: https://github.com/hadenlabs/terraform-null-tags/actions/workflows/lint.yml/badge.svg?branch=develop
-    url: https://github.com/hadenlabs/terraform-null-tags/actions
-  - name: Issues
-    image: https://img.shields.io/github/issues/hadenlabs/terraform-null-tags.svg
-    url: https://github.com/hadenlabs/terraform-null-tags/issues
-  - name: Latest Release
-    image: https://img.shields.io/github/release/hadenlabs/terraform-null-tags.svg
-    url: https://github.com/hadenlabs/terraform-null-tags/releases
+    image: https://img.shields.io/github/workflow/status/hadenlabs/terraform-null-tags/lint-code
+    url: https://github.com/hadenlabs/terraform-null-tags/actions?workflow=lint-code
+  - name: CI
+    image: https://img.shields.io/github/workflow/status/hadenlabs/terraform-null-tags/ci
+    url: https://github.com/hadenlabs/terraform-null-tags/actions?workflow=ci
+  - name: Test
+    image: https://img.shields.io/github/workflow/status/hadenlabs/terraform-null-tags/test
+    url: https://github.com/hadenlabs/terraform-null-tags/actions?workflow=test
+  - name: pre-commit
+    image: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+    url: https://github.com/pre-commit/pre-commit
+  - name: Conventional Commits
+    image: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow
+    url: https://conventionalcommits.org
+  - name: KeepAChangelog
+    image: https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange
+    url: https://keepachangelog.com
+  - name: Terraform Version
+    image: https://img.shields.io/badge/terraform-1.x%20|%200.15%20|%200.14%20|%200.13%20|%200.12.20+-623CE4.svg?logo=terraform
+    url: https://github.com/hashicorp/terraform/releases
+
+requirements: |-
+
+  This is a list of plugins that need to be installed previously to enjoy all the goodies of this configuration:
+
+  - [gomplate](https://github.com/hairyhenderson/gomplate)
+  - [terraform](https://github.com/hashicorp/terraform)
+  - [python](https://www.python.org)
+  - [taskfile](https://github.com/go-task/task)
 
 # Short description of this project
 description: |-
   terraform tags
 
-# How to use this project
-usage: |-
-
-  ```hcl
-    module "main" {
-      source = "hadenlabs/terraform-null-tags"
-      version = "0.2.0"
-      namespace   = "hadenlabs"
-      environment = "us-east-1"
-      stage       = "develop"
-      name        = "jenkins"
-    }
-  ```
-
-  Full working examples can be found in [examples](./examples) folder.
+usages:
+  - docs/usage.md
 
 examples:
   - 'docs/examples/common.md'

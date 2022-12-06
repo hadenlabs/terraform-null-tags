@@ -1,12 +1,10 @@
-<!-- Space: TerraformNullTags -->
-<!-- Parent: Project -->
-<!-- Title: Project Testing -->
-
-<!-- Label: Testing -->
-<!-- Include: docs/disclaimer.md -->
-<!-- Include: ac:toc -->
-
 # Testing
+
+## Running all tests
+
+```bash
+task test
+```
 
 ## Running tests
 
