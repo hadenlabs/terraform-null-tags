@@ -160,6 +160,7 @@ title = "gitleaks config"
         description = "ignore value fake"
         regexes = [
             '''host=HOST''',
+            '''--private-key={{.PRIVATE_KEY_FILE}}''',
         ]
 
 [[rules]]
@@ -175,6 +176,7 @@ title = "gitleaks config"
             '''git@gitlab.com''',
             '''slovacus@gmail.com''',
             '''luis@hadenlabs.com''',
+            '''security@hadenlabs.com''',
             '''hola@hadenlabs.com''',
             '''hello@hadenlabs.com''',
             '''support@hadenlbas.com''',
@@ -222,11 +224,19 @@ title = "gitleaks config"
     description = "Files with keys and credentials"
     file = '''(?i)(id_rsa|passwd|id_rsa.pub|pgpass)$'''
     tags = ["key", "files"]
+    [rules.allowlist]
+        description = "ignore some"
+        files = ['''(.*pub|env)$''']
 
 [[rules]]
     description = "Extension Files with keys and credentials"
     file = '''(.*?)(pub|pem|ppk|key)$'''
     tags = ["key", "files"]
+    [rules.allowlist]
+        description = "ignore file test"
+        files = [
+          '''.*-test.*$''',
+        ]
 
 # Global allowlist
 [allowlist]
@@ -234,7 +244,7 @@ title = "gitleaks config"
   paths = [
     '''^vendor/''',
     '''^bower_components/''',
-    '''^public/js/bower_components/''',
+    '''^public/''',
     '''^node_modules/''',
     '''^theme/''',
   ]
@@ -247,9 +257,18 @@ title = "gitleaks config"
     '''^sonar-project.properties$''',
     '''^node_modules/(.*?)$''',
   ]
+  commits = [
+    '''5530b41269a24a0a680e78f0281eb28ef7cee591''',
+  ]
 
 [whitelist]
   description = "image and html allowlists"
+  paths = [
+    '''^vendor/(.*?)$''',
+    '''^node_modules/(.*?)$''',
+    '''^test/fixtures/keys/(.*?)$''',
+  ]
+
   files = [
     '''(.*?)(jpg|gif|png|doc|pdf|bin|mp3|mp4|mov|ttf|woff|woff2|eot|lock)$''',
     '''^\.gitignore$''',
@@ -257,8 +276,5 @@ title = "gitleaks config"
     '''^\.gitignore$''',
     '''^yarn.lock$''',
     '''^sonar-project.properties$''',
-  ]
-  paths = [
-    '''^vendor/(.*?)$''',
-    '''^node_modules/(.*?)$''',
+    '''^test/fixtures/keys/.*-test.*$''',
   ]
